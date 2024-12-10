@@ -1,0 +1,73 @@
+.heroSection {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.carouselSlide {
+  position: relative;
+  text-align: center;
+}
+
+.carouselImage {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.slick-prev,
+.slick-next {
+  font-size: 24px;
+  color: #333;
+  z-index: 1;
+}
+
+.arrow {
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  padding: 10px;
+  color: #fff !important;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.arrow:hover {
+  background: #007bff;
+  transform: scale(1.1);
+}
+
+.slick-dots {
+  bottom: 20px;
+}
+
+.slick-dots li button:before {
+  font-size: 12px;
+  color: #fff;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #007bff;
+}
+
+/* Responsive Adjustments */
+
+/* For screens 1024px and below */
+@media (max-width: 1024px) {
+  .slick-prev,
+  .slick-next {
+    font-size: 18px;
+    padding: 8px;
+  }
+}
+
+/* For screens 768px and below */
+@media (max-width: 768px) {
+  .slick-prev,
+  .slick-next {
+    font-size: 16px;
+    padding: 6px;
+  }
+
+  .carouselImage {
+    object-fit: cover;
+  }
+}

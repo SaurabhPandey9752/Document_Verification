@@ -1,0 +1,155 @@
+/* Container for the entire page */
+.signUpContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(to right, #d3d3d3, #a9a9a9); /* Greyish gradient */
+    padding-top: 50px; /* Added space from the top */
+    padding-bottom: 50px; /* Added space from the bottom */
+  }
+  
+  /* Form container styling */
+  .formContainer {
+    background-color: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px; /* Slightly wider for two input fields */
+    text-align: center;
+  }
+  
+  /* Header styling */
+  .header {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* Form styling */
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  /* Styling for form groups (label + input) */
+  .formGroup {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  
+  /* Styling for the row with First Name and Last Name */
+  .nameRow {
+    display: flex;
+    gap: 20px; /* Space between the two inputs */
+    justify-content: space-between; /* Ensure even spacing */
+  }
+  
+  /* Styling for the row with Password and Confirm Password */
+  .passwordRow {
+    display: flex;
+    gap: 20px; /* Space between the two inputs */
+    justify-content: space-between; /* Ensure even spacing */
+  }
+  
+  /* Label styling */
+  label {
+    font-size: 1rem;
+    color: #333;
+  }
+  
+  /* Input field styling */
+  input {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Input focus effect */
+  input:focus {
+    outline: none;
+    border-color: #6a11cb;
+    box-shadow: 0 0 5px rgba(106, 17, 203, 0.5);
+  }
+  
+  /* Button styling */
+  button {
+    padding: 12px 24px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    border: none;
+    background-color: #2575fc;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Button hover effect */
+  button:hover {
+    background-color: #6a11cb;
+  }
+  
+  /* Disabled button styling */
+  button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  /* Styling for the links */
+  .link {
+    color: #2575fc;
+    text-decoration: none;
+  }
+  
+  /* Link hover effect */
+  .link:hover {
+    text-decoration: underline;
+  }
+  
+  /* Styling for the 'Verify Email ID' button */
+  .verifyBtn {
+    background-color: #6a11cb;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Verify button hover effect */
+  .verifyBtn:hover {
+    background-color: #2575fc;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .formContainer {
+      padding: 30px;
+      width: 90%;
+    }
+  
+    .header {
+      font-size: 1.8rem;
+    }
+  
+    input,
+    button {
+      font-size: 1rem;
+    }
+  
+    .nameRow {
+      flex-direction: column; /* Stack the inputs vertically on small screens */
+      gap: 10px; /* Reduce the gap between inputs */
+    }
+  
+    .passwordRow {
+      flex-direction: column; /* Stack the inputs vertically on small screens */
+      gap: 10px; /* Reduce the gap between inputs */
+    }
+  }

@@ -1,0 +1,129 @@
+.statisticsSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 40px;
+  background-color: #f9f9f9;
+  border-radius: 15px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  flex-wrap: wrap; /* Ensure items stack on smaller screens */
+}
+
+.textContent {
+  flex: 1;
+  max-width: 60%;
+  padding-right: 20px;
+  margin-bottom: 20px; /* Space for mobile view */
+}
+
+.textContent h2 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #000;
+}
+
+.textContent p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #555;
+}
+
+.statsBox {
+  flex: 0 0 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(45deg, #c7b8f5, #fbc8d4);
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  max-width: 400px; /* Prevent it from becoming too wide */
+  margin-top: 20px; /* Space for mobile view */
+}
+
+.statsItemsWrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 20px;
+  flex-wrap: wrap; /* Stack items on small screens */
+}
+
+.statsItem {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px; /* Space between items on mobile */
+  width: 45%; /* Adjust width for mobile screens */
+}
+
+.statsIcon {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+.statsItem h3 {
+  font-size: 22px;
+  font-weight: bold;
+  color: #2a2a2a;
+  margin-bottom: 5px;
+}
+
+.statsItem p {
+  font-size: 14px;
+  color: #555;
+}
+
+.statsButton {
+  margin-top: 10px;
+  background-color: #fff;
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.statsButton:hover {
+  background-color: #f0f0f0;
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .statisticsSection {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .textContent {
+    max-width: 100%;
+    padding-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .statsBox {
+    flex: 1;
+    width: 82%;
+    max-width: 100%;
+    padding: 20px;
+  }
+
+  .statsItemsWrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .statsItem {
+    width: 100%; /* Full width on smaller screens */
+    margin-bottom: 20px;
+  }
+}

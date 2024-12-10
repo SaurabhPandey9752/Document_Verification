@@ -1,0 +1,218 @@
+.container {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.5;
+  background-color: #F5F5F5;
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: #0015A5;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.headerText {
+  font-size: 18px;
+  margin: 0;
+}
+
+.headerButton {
+  background-color: #fff;
+  color: #0015A5;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap; /* Allows content to wrap on smaller screens */
+}
+
+.leftCard {
+  flex: 1;
+  background-color: #FDB44B;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.cardTitle {
+  color: #0015A5;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.cardDescription {
+  font-size: 16px;
+  color: #000;
+  margin-bottom: 20px;
+}
+
+.partnershipImage {
+  width: 150px;
+  height: 150px;
+  margin-bottom: 20px;
+}
+
+.cardButton {
+  background-color: #fff;
+  color: #0015A5;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.rightCard {
+  flex: 1;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.appText {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #000;
+}
+
+.rightContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 20px;
+  flex-wrap: wrap; /* Allows content to wrap on smaller screens */
+}
+
+.qrSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.qrImage {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 10px;
+}
+
+.appIcons {
+  display: flex;
+  margin-left: 40px;
+  margin-top: 20px;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.appIconImage {
+  width: 120px;
+  height: 40px;
+}
+
+.phoneImage {
+  width: 250px;
+  height: auto;
+  margin-right: 10px;
+}
+
+/* Responsive Design for smaller screens */
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .headerButton {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  .cardTitle {
+    font-size: 18px;
+  }
+
+  .cardDescription {
+    font-size: 14px;
+  }
+
+  .cardButton {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  .appText {
+    font-size: 16px;
+  }
+
+  .appIconImage {
+    width: 100px;
+    height: 35px;
+  }
+
+  .phoneImage {
+    width: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+  }
+
+  .headerText {
+    font-size: 16px;
+  }
+
+  .headerButton {
+    font-size: 14px;
+    padding: 8px 16px;
+    margin-top: 10px;
+  }
+
+  .leftCard {
+    flex: 1;
+    padding: 15px;
+  }
+
+  .cardTitle {
+    font-size: 16px;
+  }
+
+  .cardDescription {
+    font-size: 14px;
+  }
+
+  .cardButton {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  .phoneImage {
+    width: 150px;
+  }
+
+  .qrImage {
+    width: 80px;
+    height: 80px;
+  }
+
+  .appIconImage {
+    width: 90px;
+    height: 30px;
+  }
+}

@@ -1,0 +1,64 @@
+.newDigiLocker {
+  margin: 20px auto;
+  max-width: 1200px;
+  display: block;
+}
+
+.newDigiLocker h2 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #212121;
+  text-align: left;
+}
+
+.sliderContainer {
+  margin-bottom: 30px;
+}
+
+.sliderCard {
+  position: relative;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  height: 150px;
+  overflow: hidden;
+}
+
+.sliderImage {
+  width: 90%;
+  height: auto;
+  object-fit: contain;
+}
+
+.quickLinksContainer {
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+}
+
+.quickLink {
+  white-space: nowrap;
+  padding: 10px 15px;
+  background-color: #f9f9f9;
+  color: #424242;
+  border: 1px solid #e0e0e0;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.quickLinkIcon {
+  font-size: 1rem;
+}
+
+.quickLinksContainer button:hover {
+  background-color: #e3f2fd;
+  color: #2962ff;
+}

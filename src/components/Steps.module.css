@@ -1,0 +1,97 @@
+.container {
+    text-align: center;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+  }
+  
+  .heading {
+    font-size: 24px;
+    color: #000;
+    margin-bottom: 20px;
+  }
+  
+  .stepsContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+  }
+  
+  .step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .icon {
+    margin-bottom: 10px;
+  }
+  
+  .iconImage {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .text {
+    font-size: 14px;
+    color: #000;
+    margin: 0;
+  }
+  
+  .arrow {
+    font-size: 24px;
+    color: #000;
+  }
+  
+  /* Responsive Design for smaller screens */
+  @media (max-width: 768px) {
+    .stepsContainer {
+      flex-direction: column; /* Stack the steps vertically */
+      gap: 20px;
+    }
+  
+    .iconImage {
+      width: 40px;
+      height: 40px;
+    }
+  
+    .text {
+      font-size: 16px; /* Increase font size for readability */
+    }
+  
+    .arrow {
+      font-size: 20px; /* Reduce the size of arrows */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .container {
+      padding: 15px;
+    }
+  
+    .heading {
+      font-size: 20px; /* Reduce heading size for smaller screens */
+    }
+  
+    .stepsContainer {
+      gap: 15px; /* Reduce gap between steps */
+    }
+  
+    .iconImage {
+      width: 35px;
+      height: 35px;
+    }
+  
+    .text {
+      font-size: 14px; /* Further reduce text size for mobile screens */
+    }
+  
+    .arrow {
+      font-size: 18px; /* Further reduce arrow size */
+    }
+  }
+  
