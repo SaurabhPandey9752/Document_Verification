@@ -1,34 +1,53 @@
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom'; // For navigation
+import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import styles from './Header.module.css';
 
 function Header() {
-  const navigate = useNavigate(); // Hook for navigation
-  const [isMenuOpen, setIsMenuOpen] = useState(false); // Track menu state (open or closed)
+  const navigate = useNavigate();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  
+  // Function to handle screen resizing
+  const handleResize = () => {
+    if (window.innerWidth > 768) {
+      setIsMenuOpen(false); // Close the menu on larger screens
+    }
+  };
+
+  // Run handleResize on initial render and when the window is resized
+  useEffect(() => {
+    window.addEventListener('resize', handleResize);
+
+    // Call handleResize once to ensure correct menu state on initial load
+    handleResize();
+
+    // Cleanup the event listener
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   const handleSignInClick = () => {
-    navigate('/signup'); // Navigate to Sign In page when clicked
+    navigate('/signup');
   };
 
   const handleHomeClick = () => {
-    navigate('/'); // Navigate to Home page when clicked
+    navigate('/');
   };
 
   const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen); // Toggle menu open/close
+    setIsMenuOpen(!isMenuOpen);
   };
 
   return (
     <header className={styles.header}>
       <div className={styles.logo}>
-        <img src="emblem.jpeg" alt="Government Logo" />
-        <h1>DigiLocker</h1>
+        <img src="logo.jpeg" alt="Government Logo" className={styles.logoImg} />
+        <img src="docchain.jpeg" alt="DocChain Logo" className={styles.logoImg} />
       </div>
 
-      {/* Hamburger Icon for smaller screens */}
       <div className={styles.hamburger} onClick={toggleMenu}>
         {isMenuOpen ? (
-          <span className={styles.closeIcon}>&times;</span> // Close icon when menu is open
+          <span className={styles.closeIcon}>&times;</span>
         ) : (
           <>
             <div className={styles.bar}></div>
@@ -38,12 +57,12 @@ function Header() {
         )}
       </div>
 
-      <div className={`${styles.headerButtons} ${isMenuOpen ? styles.active : ''}`}>
-        <button className={styles.btn} onClick={handleHomeClick}>Home</button> {/* Home button */}
-        <button className={styles.btn}>Become a Partner</button>
+      <nav className={`${styles.navMenu} ${isMenuOpen ? styles.active : ''}`}>
+        <button className={styles.btn} onClick={handleHomeClick}>Home</button>
+        <button className={styles.btn}>About Us</button>
         <button className={styles.btn} onClick={handleSignInClick}>Sign Up</button>
         <button className={`${styles.btn} ${styles.signUp}`}>Sign In</button>
-      </div>
+      </nav>
     </header>
   );
 }

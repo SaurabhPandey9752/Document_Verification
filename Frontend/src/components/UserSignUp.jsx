@@ -1,26 +1,53 @@
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import styles from './UserSignUp.module.css';
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import styles from "./UserSignUp.module.css";
 
 const UserSignUp = () => {
-  const [firstName, setFirstName] = useState('');
-  const [lastName, setLastName] = useState('');
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [confirmPassword, setConfirmPassword] = useState('');
+  const [username, setUsername] = useState(""); // New state for username
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
   const [agree, setAgree] = useState(false);
 
   const navigate = useNavigate();
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle sign-up logic here
-    alert('Sign Up Successful!');
-  };
 
-  const handleVerifyEmail = () => {
-    // Navigate to verify-email page
-    navigate('/verify-email');
+    if (password !== confirmPassword) {
+      alert("Passwords do not match");
+      return;
+    }
+
+    try {
+      const response = await fetch("http://localhost:5000/api/users/signup", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          username, // Include username in the payload
+          firstName,
+          lastName,
+          email,
+          password,
+        }),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        alert("Sign Up Successful! Please verify your email.");
+        navigate("/verify-email");
+      } else {
+        alert(data.message || "Sign Up Failed");
+      }
+    } catch (error) {
+      console.error("Error signing up:", error);
+      alert("An error occurred during signup. Please try again.");
+    }
   };
 
   return (
@@ -28,6 +55,17 @@ const UserSignUp = () => {
       <div className={styles.formContainer}>
         <h1 className={styles.header}>Sign Up for Docu</h1>
         <form className={styles.form} onSubmit={handleSubmit}>
+          <div className={styles.formGroup}>
+            <label htmlFor="username">Username</label>
+            <input
+              type="text"
+              id="username"
+              placeholder="Enter your username"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+              required
+            />
+          </div>
           <div className={styles.formGroup}>
             <label htmlFor="email">Email Address</label>
             <input
@@ -39,7 +77,6 @@ const UserSignUp = () => {
               required
             />
           </div>
-
           <div className={styles.nameRow}>
             <div className={styles.formGroup}>
               <label htmlFor="firstName">First Name</label>
@@ -52,7 +89,6 @@ const UserSignUp = () => {
                 required
               />
             </div>
-
             <div className={styles.formGroup}>
               <label htmlFor="lastName">Last Name</label>
               <input
@@ -65,7 +101,6 @@ const UserSignUp = () => {
               />
             </div>
           </div>
-
           <div className={styles.nameRow}>
             <div className={styles.formGroup}>
               <label htmlFor="password">Password</label>
@@ -78,7 +113,6 @@ const UserSignUp = () => {
                 required
               />
             </div>
-
             <div className={styles.formGroup}>
               <label htmlFor="confirmPassword">Confirm Password</label>
               <input
@@ -91,7 +125,6 @@ const UserSignUp = () => {
               />
             </div>
           </div>
-
           <div className={styles.formGroup}>
             <label>
               <input
@@ -99,18 +132,17 @@ const UserSignUp = () => {
                 checked={agree}
                 onChange={() => setAgree(!agree)}
               />
-              By signing up, you agree to our{' '}
-              <span className={styles.link}>Terms of Service</span> and{' '}
+              By signing up, you agree to our{" "}
+              <span className={styles.link}>Terms of Service</span> and{" "}
               <span className={styles.link}>Privacy Policy</span>.
             </label>
           </div>
-
           <button
-            type="button"
-            className={styles.verifyBtn}
-            onClick={handleVerifyEmail}
+            type="submit"
+            className={styles.submitButton}
+            disabled={!agree}
           >
-            Verify Email ID
+            Sign Up
           </button>
         </form>
       </div>

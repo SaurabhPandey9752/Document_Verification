@@ -6,11 +6,10 @@ const Footer = () => {
     <footer className={styles.footer}>
       <div className={styles.footerContainer}>
         <div className={styles.footerSection}>
-          <h4>DigiLocker</h4>
+          <h4>Doc-Chain</h4>
           <p>
-            DigiLocker aims at ‘Digital Empowerment’ of the citizen by providing
-            access to authentic digital documents to the citizen’s digital
-            document wallet.
+            Doc-Chain aims at ‘Digital Empowerment’ of citizens by providing
+            access to authentic digital documents in a secure digital wallet.
           </p>
           <div className={styles.footerSocialIcons}>
             <a href="#"><img src="facebook.png" alt="Facebook" /></a>
@@ -25,7 +24,7 @@ const Footer = () => {
           </p>
         </div>
         <div className={`${styles.footerSection} ${styles.footerLinks}`}>
-          <h4>Links</h4>
+          <h4>Quick Links</h4>
           <ul>
             <li><a href="#">Home</a></li>
             <li><a href="#">About Us</a></li>
@@ -35,7 +34,7 @@ const Footer = () => {
           </ul>
         </div>
         <div className={`${styles.footerSection} ${styles.footerLinks}`}>
-          <h4>Need Help?</h4>
+          <h4>Support</h4>
           <ul>
             <li><a href="#">Feedback</a></li>
             <li><a href="#">Partners</a></li>
@@ -53,8 +52,7 @@ const Footer = () => {
       </div>
       <div className={styles.footerBottom}>
         <p>
-          &copy; 2024, Website maintained by National eGovernance Division
-          (NeGD)
+          &copy; 2024, Website maintained by National eGovernance Division (NeGD).
         </p>
       </div>
     </footer>

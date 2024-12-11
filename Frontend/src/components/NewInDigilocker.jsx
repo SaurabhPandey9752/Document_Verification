@@ -20,7 +20,7 @@ const NewInDigiLocker = () => {
   };
 
   const featuredItems = [
-    { src: "umang.png", alt: "Slide 1" },
+    { src: "15.jpg", alt: "Slide 1" },
     { src: "audit.png", alt: "Slide 2" },
     { src: "fund.png", alt: "Slide 3" },
     { src: "municipal.png", alt: "Slide 4" },
@@ -37,7 +37,7 @@ const NewInDigiLocker = () => {
 
   return (
     <div className={styles.newDigiLocker}>
-      <h2>New in DigiLocker</h2>
+      <h2>New in Doc-Chain</h2>
       <div className={styles.sliderContainer}>
         <Slider {...sliderSettings}>
           {featuredItems.map((item, index) => (

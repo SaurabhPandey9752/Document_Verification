@@ -4,7 +4,8 @@ import './App.css'; // Import global styles
 import TopBar from './components/TopBar'; // Import TopBar component
 import Header from './components/Header'; // Import Header component
 import HomePage from './components/HomePage'; // Import HomePage component
-import SignIn from './components/SignIn'; // Import SignIn page
+// import SignIn from './components/SignIn'; // Import SignIn page
+import SignUp from './components/SignUp';
 // import SignUp from './components/SignUp'; // Import SignUp page (new page)
 import Footer from './components/Footer'; // Import Footer component
 import "slick-carousel/slick/slick.css";
@@ -26,7 +27,7 @@ function App() {
         {/* Define your routes here */}
         <Routes>
           <Route path="/" element={<HomePage />} /> {/* Render HomePage component for home route */}
-          <Route path="/signup" element={<SignIn />} /> {/* Render SignIn component for /signin route */}
+          <Route path="/signup" element={<SignUp />} /> {/* Render SignIn component for /signin route */}
           <Route path="/usersignup" element={<UserSignUp/>} /> {/* Render SignUp component for /signup route */}
           <Route path="/issuingauthoritysignup" element={<IssuingAuthoritySignup/>}/>
           <Route path="/verifyingauthoritysignup" element={<IssuingAuthoritySignup/>}/>

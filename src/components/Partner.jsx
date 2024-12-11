@@ -6,7 +6,7 @@ const Partner = () => {
     <div className={styles.container}>
       <div className={styles.header}>
         <p className={styles.headerText}>
-         Doc-Chain is  a secure cloud-based platform for storage, sharing and
+          Doc-Chain is a secure cloud-based platform for storage, sharing and
           verification of documents & certificates
         </p>
         <button className={styles.headerButton}>SIGN UP NOW</button>
@@ -14,9 +14,9 @@ const Partner = () => {
 
       <div className={styles.content}>
         <div className={styles.leftCard}>
-          <h2 className={styles.cardTitle}>Become a Doc-Chain Partner Organization</h2>
+          <h2 className={styles.cardTitle}>Become a DigiLocker Partner Organization</h2>
           <p className={styles.cardDescription}>
-            Get registered as a Doc-Chain Issuer or Requester!
+            Get registered as a DigiLocker Issuer or Requester!
           </p>
           <img
             src="Group.png"
@@ -27,7 +27,7 @@ const Partner = () => {
         </div>
 
         <div className={styles.rightCard}>
-          <h3 className={styles.appText}>Download Doc-Chain App</h3>
+          <h3 className={styles.appText}>Download DigiLocker App</h3>
           <div className={styles.rightContent}>
             <div className={styles.qrSection}>
               <img
@@ -49,7 +49,7 @@ const Partner = () => {
               </div>
             </div>
             <img
-              src="mob.png" 
+              src="phone.png" 
               alt="DigiLocker App Preview"
               className={styles.phoneImage}
             />

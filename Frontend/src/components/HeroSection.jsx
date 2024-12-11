@@ -6,15 +6,15 @@ import "slick-carousel/slick/slick-theme.css";
 
 const images = [
   {
-    src: "digi.jpg",
+    src: "17.jpg",
     alt: "Slide 1",
   },
   {
-    src: "digi2.jpg",
+    src: "18.jpg",
     alt: "Slide 2",
   },
   {
-    src: "digi3.jpg",
+    src: "19.jpg",
     alt: "Slide 3",
   },
 ];

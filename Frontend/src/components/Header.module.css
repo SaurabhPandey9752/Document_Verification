@@ -5,41 +5,64 @@
   padding: 10px 20px;
   background-color: white;
   box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
-  flex-wrap: wrap; /* Allows elements to wrap in smaller screens */
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 2;
 }
 
 .logo {
   display: flex;
   align-items: center;
-  margin-right: 20px; /* Space between logo and buttons */
-  flex: 1;
+  margin-right: 20px;
 }
 
-.logo img {
-  height: 40px;
+.logoImg {
+  height: 50px;
   margin-right: 10px;
 }
 
-.headerButtons {
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+}
+
+.closeIcon {
+  font-size: 24px;
+  color: #333;
+  cursor: pointer;
+}
+
+.navMenu {
   display: flex;
   justify-content: flex-end;
   align-items: center;
   flex: 2;
-  gap: 10px;
+  gap: 12px; /* Reduced gap between nav items */
+  padding: 0;
+  transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
-.headerButtons .btn {
-  margin-left: 10px;
+.navMenu .btn {
+  margin: 0;
 }
 
 .btn {
-  padding: 8px 12px;
+  padding: 8px 12px; /* Reduced padding for buttons */
   border-radius: 5px;
   cursor: pointer;
   border: none;
   background-color: #f0f0f0;
   color: #333;
   transition: background-color 0.3s ease, transform 0.2s ease;
+  font-size: 18px; /* Slightly smaller font size */
 }
 
 .btn:hover {
@@ -56,50 +79,56 @@
   background-color: #0056e0;
 }
 
+/* Styling for hamburger menu when active */
+.navMenu.active {
+  position: absolute;
+  top: 60px;
+  left: 10px;
+  right: 10px;
+  background: rgba(255, 255, 255, 0.8); /* Transparent white background */
+  backdrop-filter: blur(8px); /* Blur effect */
+  flex-direction: column;
+  gap: 15px; /* Spacing between menu items */
+  padding: 15px; /* Reduced padding for the menu */
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+}
+
 /* Responsive Styling */
-
-/* For screens 768px and below (tablets and small screens) */
 @media (max-width: 768px) {
-  .header {
-    justify-content: center;
+  .hamburger {
+    display: flex;
   }
 
-  .logo {
-    margin-right: 0;
-    justify-content: center;
-    flex: 1;
-    text-align: center;
+  .navMenu {
+    display: none;
+    flex-direction: column;
+    transform: translateY(-100%);
   }
 
-  .logo img {
-    height: 30px;
+  .navMenu.active {
+    display: flex;
+    transform: translateY(0);
   }
 
-  .headerButtons {
-    justify-content: center;
-    flex: 1;
-    margin-top: 10px; /* Space between logo and buttons */
-  }
-
-  .headerButtons .btn {
-    width: 100%;
-    margin-left: 0;
-    margin-bottom: 10px;
-    padding: 10px;
-  }
-
-  .signUp {
-    width: 100%;
+  .logoImg {
+    height: 40px;
   }
 }
 
-/* For screens 480px and below (mobile devices) */
 @media (max-width: 480px) {
-  .logo h1 {
-    font-size: 1.2rem;
+  .logoImg {
+    height: 30px;
   }
 
   .btn {
-    font-size: 0.9rem;
+    font-size: 14px;
+    padding: 10px;
+    width: 107px;
+  }
+
+  .signUp {
+    font-size: 14px;
   }
 }

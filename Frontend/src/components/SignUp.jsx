@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom'; // Link for navigation
-import styles from './SignIn.module.css'; // Importing CSS Module for styling
+import styles from './SignUp.module.css'; // Importing CSS Module for styling
 
-function SignIn() {
+function SignUp() {
   return (
     <div className={styles.signInContainer}>
       <div className={styles.content}>
@@ -39,4 +39,4 @@ function SignIn() {
   );
 }
 
-export default SignIn;
+export default SignUp;

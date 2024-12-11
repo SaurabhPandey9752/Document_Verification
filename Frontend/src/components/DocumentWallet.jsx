@@ -7,12 +7,8 @@ const DocumentWallet = () => {
       <div className={styles.textContent}>
         <h2>Document Wallet to Empower Citizens</h2>
         <p>
-          DigiLocker is a flagship initiative of Ministry of Electronics & IT
-          (MeitY) under the Digital India programme. DigiLocker aims at 'Digital
-          Empowerment' of citizens by providing access to authentic digital
-          documents to the citizen's digital document wallet. DigiLocker is a
-          secure cloud-based platform for storage, sharing, and verification of
-          documents & certificates.
+        Doc-Chain is a flagship initiative of the Ministry of Power under the Digital India programme. Doc-Chain aims at 'Digital Empowerment' of citizens by providing access to authentic digital documents through the citizen's digital document wallet. DocChain is a secure cloud-based platform for the storage, sharing, and verification of documents & certificates.
+
         </p>
       </div>
       <div className={styles.statsBox}>
