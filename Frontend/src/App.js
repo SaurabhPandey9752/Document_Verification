@@ -15,6 +15,17 @@ import IssuingAuthoritySignup from './components/IssusingAuthoritySignup';
 import VerifyEmail from './components/VerifyEmail';
 import CreateWallet from './components/CreateWallet';
 import SuccessPage from './components/SuccessPage';
+import Home from './components/Home';
+import Dashboard from './components/Dashboard';
+import SignInOption from './components/SignInOption';
+import IssuedCertificatePage from './components/IssuedCertificatePage';
+import GenerateCertificate from './components/GenerateCertificate';
+import UploadCertificate from './components/UploadCertificate';
+import CertificateTemplatePage from './components/CertificateTemplatePage';
+import RequestAccess from './components/RequestAccess';
+import AccessDocument from './components/AccessDocument';
+import AccessInformation from './components/AccessInformation';
+import VerifierDashboard from './components/VerifierDashboard';
 
 function App() {
   return (
@@ -28,12 +39,26 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} /> {/* Render HomePage component for home route */}
           <Route path="/signup" element={<SignUp />} /> {/* Render SignIn component for /signin route */}
+          <Route path="/signin" element={<SignInOption/>}/>
+          <Route path="/usersignin" element={<Dashboard/>} /> 
+          <Route path="/issuedsignin" element={<IssuedCertificatePage/>} /> 
           <Route path="/usersignup" element={<UserSignUp/>} /> {/* Render SignUp component for /signup route */}
           <Route path="/issuingauthoritysignup" element={<IssuingAuthoritySignup/>}/>
           <Route path="/verifyingauthoritysignup" element={<IssuingAuthoritySignup/>}/>
+          <Route path="/issuedcertificatesignin" element={<CertificateTemplatePage/>} />
+          <Route path="/about-us" element={<Home/>} />
           <Route path="/verify-email" element={<VerifyEmail/>}/>
+          <Route path="/verifiersignin" element={<VerifierDashboard/>}/>
+          <Route path="/request-access" element={<RequestAccess />} />
+        <Route path="/request-access/document" element={<AccessDocument />} />
+        <Route
+          path="/request-access/information"
+          element={<AccessInformation />}
+        />
           <Route path="/create-wallet" element={<CreateWallet/>}/>
           <Route path="/success" element={<SuccessPage/>}/>
+          <Route path="/generate-certificate" element={<GenerateCertificate/>} />
+          <Route path="/upload-certificate" element={<UploadCertificate/>} />
         </Routes>
 
         {/* Always render Footer */}

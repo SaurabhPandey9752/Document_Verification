@@ -26,8 +26,14 @@ function Header() {
     };
   }, []);
 
-  const handleSignInClick = () => {
+  const handleSignUpClick = () => {
     navigate('/signup');
+  };
+  const handleSignInClick = () => {
+    navigate('/signin');
+  };
+  const handleAboutClick = () => {
+    navigate('/about-us');
   };
 
   const handleHomeClick = () => {
@@ -59,9 +65,9 @@ function Header() {
 
       <nav className={`${styles.navMenu} ${isMenuOpen ? styles.active : ''}`}>
         <button className={styles.btn} onClick={handleHomeClick}>Home</button>
-        <button className={styles.btn}>About Us</button>
-        <button className={styles.btn} onClick={handleSignInClick}>Sign Up</button>
-        <button className={`${styles.btn} ${styles.signUp}`}>Sign In</button>
+        <button className={styles.btn} onClick={handleAboutClick}>About Us</button>
+        <button className={styles.btn} onClick={handleSignUpClick}>Sign Up</button>
+        <button className={`${styles.btn} ${styles.signUp}`} onClick={handleSignInClick}>Sign In</button>
       </nav>
     </header>
   );

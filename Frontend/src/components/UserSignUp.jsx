@@ -53,7 +53,7 @@ const UserSignUp = () => {
   return (
     <div className={styles.signUpContainer}>
       <div className={styles.formContainer}>
-        <h1 className={styles.header}>Sign Up for Docu</h1>
+        <h1 className={styles.header}>Sign Up for Doc-Chain</h1>
         <form className={styles.form} onSubmit={handleSubmit}>
           <div className={styles.formGroup}>
             <label htmlFor="username">Username</label>

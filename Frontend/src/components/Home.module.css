@@ -1,0 +1,153 @@
+.main {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+  }
+  
+  .heroSection {
+    background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+    padding: 4rem 2rem;
+    text-align: center;
+  }
+  
+  .glowBar {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 8px;
+    background: linear-gradient(to right, #4caf50, #81c784);
+  }
+  
+  .glowBarLine {
+    height: 100%;
+    width: 50%;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.3);
+  }
+  
+  .primaryContent {
+    margin: 2rem 0;
+  }
+  
+  .textContent {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .title {
+    font-size: 2.5rem;
+    color: #0d47a1;
+    margin-bottom: 1rem;
+  }
+  
+  .description {
+    font-size: 1.2rem;
+    color: #424242;
+    margin-bottom: 2rem;
+  }
+  
+  .buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  .primaryButton,
+  .secondaryButton {
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .primaryButton {
+    background: #42a5f5;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .primaryButton:hover {
+    background: #1e88e5;
+  }
+  
+  .secondaryButton {
+    background: transparent;
+    border: 2px solid #42a5f5;
+    color: #42a5f5;
+  }
+  
+  .secondaryButton:hover {
+    background: #42a5f5;
+    color: #fff;
+  }
+  
+  .productivitySection {
+    background: #f3e5f5;
+    padding: 4rem 2rem;
+    position: relative;
+  }
+  
+  .aboutText {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .textTitle {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #7b1fa2;
+  }
+  
+  .mainText {
+    max-width: 600px;
+    margin: 0 auto 2rem auto;
+    text-align: center;
+  }
+  
+  .imageContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+  
+  .primaryImage {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+  }
+  
+  .secondaryImage {
+    max-width: 300px;
+    text-align: center;
+  }
+  
+  .highlightedText {
+    font-weight: bold;
+    color: #ab47bc;
+  }
+  
+  .downloadButton {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #ab47bc;
+    color: #fff;
+    padding: 0.8rem 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .downloadButton:hover {
+    background: #8e24aa;
+  }
+  
+  .downloadText {
+    font-size: 1rem;
+  }
+  

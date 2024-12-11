@@ -6,8 +6,8 @@ function SignUp() {
   return (
     <div className={styles.signInContainer}>
       <div className={styles.content}>
-        <h2>Sign up for Docu</h2>
-        <p>Choose your plan to get started</p>
+        <h2>Sign up for Doc-Chain</h2>
+      
 
         <div className={styles.planChoices}>
           <div className={styles.plan}>
@@ -20,7 +20,7 @@ function SignUp() {
             <h3>
               <Link to="/issuingauthoritysignup" className={styles.link}>Issuing Authority</Link>
             </h3>
-            <p>I am here to issue and verify certificates</p>
+            <p>I am here to issue certificates</p>
           </div>
           <div className={styles.plan}>
             <h3>
@@ -32,7 +32,7 @@ function SignUp() {
 
         <div className={styles.contact}>
           <h3>Have a question, or need help?</h3>
-          <p>Contact Sales</p>
+          
         </div>
       </div>
     </div>
