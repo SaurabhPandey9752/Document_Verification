@@ -54,7 +54,7 @@ function App() {
           <Route path="/about-us" element={<Home/>} />
           <Route path="/verify-email" element={<VerifyEmail/>}/>
           <Route path="/verifiersignin" element={<VerifyLogin/>}/>
-          <Route path="/verifiersigninsuccesful" element={<VerifierDashboard/>}/>
+          <Route path="/verifysigninsuccesful" element={<VerifierDashboard/>}/>
           <Route path="/request-access" element={<RequestAccess />} />
         <Route path="/request-access/document" element={<AccessDocument />} />
         <Route
