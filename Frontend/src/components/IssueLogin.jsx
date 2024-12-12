@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Mail, Lock } from 'lucide-react';
+import { AiOutlineMail, AiOutlineLock } from 'react-icons/ai';
 
 const IssueLogin = () => {
   const navigate = useNavigate();
@@ -39,7 +39,8 @@ const IssueLogin = () => {
             </label>
             <div className="relative">
               <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                <Mail className="h-5 w-5 text-gray-400" />
+                {/* Email Icon */}
+                <AiOutlineMail className="h-5 w-5 text-gray-400" />
               </div>
               <input
                 id="email"
@@ -60,7 +61,8 @@ const IssueLogin = () => {
             </label>
             <div className="relative">
               <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                <Lock className="h-5 w-5 text-gray-400" />
+                {/* Password Icon */}
+                <AiOutlineLock className="h-5 w-5 text-gray-400" />
               </div>
               <input
                 id="password"
