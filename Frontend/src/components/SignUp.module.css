@@ -1,137 +1,140 @@
 /* SignIn page container */
 .signInContainer {
-    padding: 20px;
-    background-color: #f9f9f9;
-    min-height: 100vh;
-    display: flex;
+  padding: 20px;
+  background-color: #f9f9f9;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Main content */
+.content {
+  text-align: center;
+  max-width: 900px; /* Increased max-width for larger content */
+  margin: 0 auto;
+  padding: 10px; /* Added padding for better spacing */
+}
+
+.content h2 {
+  font-size: 30px; /* Increased font size */
+  margin-bottom: 20px; /* Increased margin */
+  color: #333;
+}
+
+.content p {
+  font-size: 18px; /* Slight increase in font size */
+  margin-bottom: 25px;
+  color: #555;
+}
+
+/* Plan choices styling */
+.planChoices {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  margin-top: 30px;
+}
+
+.plan {
+  padding: 25px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 15px;
+  width: 280px; /* Slight increase in width */
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Enhanced box-shadow */
+}
+
+.plan h3 {
+  font-size: 24px; /* Increased font size */
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.plan p {
+  font-size: 17px; /* Increased font size */
+  color: #555;
+}
+
+/* Hover effect for plan items */
+.plan:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  border-color: #007bff;
+}
+
+.plan:hover h3 {
+  color: #007bff;
+}
+
+/* Styling for links */
+.link {
+  color: #333; /* Set the color to match other text */
+  text-decoration: none; /* Remove underline */
+  font-size: 18px; /* Slight increase in font size for links */
+}
+
+.link:hover {
+  color: #007bff; /* Optional: color change on hover for user link */
+}
+
+/* Contact section styling */
+.contact {
+  margin-top: 50px; /* Increased top margin */
+}
+
+.contact h3 {
+  font-size: 22px; /* Increased font size */
+  margin-bottom: 10px;
+}
+
+.contact p {
+  font-size: 16px; /* Increased font size */
+  color: #007bff;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .planChoices {
     flex-direction: column;
-    justify-content: center;
     align-items: center;
   }
-  
-  /* Main content */
-  .content {
-    text-align: center;
-    max-width: 800px;
-    margin: 0 auto;
-  }
-  
-  .content h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-  }
-  
-  .content p {
-    font-size: 16px;
-    margin-bottom: 20px;
-  }
-  
-  /* Plan choices styling */
-  .planChoices {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap; /* Allow wrapping on smaller screens */
-    margin-top: 20px;
-  }
-  
+
   .plan {
-    padding: 20px;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    width: 250px;
-    text-align: center;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    margin-bottom: 25px; /* Increased bottom margin */
   }
-  
-  .plan h3 {
-    font-size: 22px;
-    margin-bottom: 10px;
-    color: #333;
+
+  .content {
+    padding: 0 20px;
   }
-  
-  .plan p {
-    font-size: 16px;
-    color: #555;
+}
+
+@media (max-width: 480px) {
+  .header h1 {
+    font-size: 24px;
   }
-  
-  /* Hover effect for plan items */
-  .plan:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-    border-color: #007bff;
+
+  .content h2 {
+    font-size: 22px; /* Increased font size for small screens */
   }
-  
-  .plan:hover h3 {
-    color: #007bff;
+
+  .planChoices {
+    gap: 25px; /* Increased gap for better spacing */
   }
-  
-  /* Styling for links */
-  .link {
-    color: #333; /* Set the color to match other text */
-    text-decoration: none; /* Remove underline */
+
+  .plan {
+    width: 100%;
   }
-  
-  .link:hover {
-    color: #007bff; /* Optional: color change on hover for user link */
+
+  .goBackButton a {
+    font-size: 14px;
+    padding: 8px 16px;
   }
-  
-  /* Contact section styling */
-  .contact {
-    margin-top: 40px;
-  }
-  
-  .contact h3 {
-    font-size: 18px;
-    margin-bottom: 10px;
-  }
-  
-  .contact p {
-    font-size: 16px;
-    color: #007bff;
-    text-decoration: underline;
-    cursor: pointer;
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .planChoices {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .plan {
-      width: 80%;
-      margin-bottom: 20px;
-    }
-  
-    .content {
-      padding: 0 20px;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .header h1 {
-      font-size: 24px;
-    }
-  
-    .content h2 {
-      font-size: 20px;
-    }
-  
-    .planChoices {
-      gap: 20px;
-    }
-  
-    .plan {
-      width: 100%;
-    }
-  
-    .goBackButton a {
-      font-size: 14px;
-      padding: 8px 16px;
-    }
-  }
-  
+}

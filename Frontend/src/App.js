@@ -26,6 +26,9 @@ import RequestAccess from './components/RequestAccess';
 import AccessDocument from './components/AccessDocument';
 import AccessInformation from './components/AccessInformation';
 import VerifierDashboard from './components/VerifierDashboard';
+import UserLogin from './components/UserLogin';
+import IssueLogin from './components/IssueLogin';
+import VerifyLogin from './components/VerifyLogin';
 
 function App() {
   return (
@@ -40,15 +43,18 @@ function App() {
           <Route path="/" element={<HomePage />} /> {/* Render HomePage component for home route */}
           <Route path="/signup" element={<SignUp />} /> {/* Render SignIn component for /signin route */}
           <Route path="/signin" element={<SignInOption/>}/>
-          <Route path="/usersignin" element={<Dashboard/>} /> 
-          <Route path="/issuedsignin" element={<IssuedCertificatePage/>} /> 
+          <Route path="/usersignin" element={<UserLogin/>} />
+          <Route path="/usersigninsuccesful" element={<Dashboard/>} />
+          <Route path="/issuedsignin" element={<IssueLogin/>} /> 
+          <Route path="/issuedsigninsuccesful" element={<IssuedCertificatePage/>} /> 
           <Route path="/usersignup" element={<UserSignUp/>} /> {/* Render SignUp component for /signup route */}
           <Route path="/issuingauthoritysignup" element={<IssuingAuthoritySignup/>}/>
           <Route path="/verifyingauthoritysignup" element={<IssuingAuthoritySignup/>}/>
           <Route path="/issuedcertificatesignin" element={<CertificateTemplatePage/>} />
           <Route path="/about-us" element={<Home/>} />
           <Route path="/verify-email" element={<VerifyEmail/>}/>
-          <Route path="/verifiersignin" element={<VerifierDashboard/>}/>
+          <Route path="/verifiersignin" element={<VerifyLogin/>}/>
+          <Route path="/verifiersigninsuccesful" element={<VerifierDashboard/>}/>
           <Route path="/request-access" element={<RequestAccess />} />
         <Route path="/request-access/document" element={<AccessDocument />} />
         <Route

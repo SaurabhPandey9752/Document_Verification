@@ -22,14 +22,14 @@ const GenerateCertificate = () => {
 
   return (
     <div className={styles.container}>
-      <h2 className={styles.heading}>Generate Your E-Certificate</h2>
+      <h2 className={styles.heading}>E-Certificate Generator</h2>
       <form onSubmit={handleSubmit} className={styles.form}>
         <div className={styles.inputGroup}>
           <FaUser className={styles.icon} />
           <input
             type="text"
             name="name"
-            placeholder="Recipient's Name"
+            placeholder="Enter recipient's name"
             value={formData.name}
             onChange={handleChange}
             required
@@ -40,7 +40,7 @@ const GenerateCertificate = () => {
           <input
             type="text"
             name="course"
-            placeholder="Course Name"
+            placeholder="Enter course name"
             value={formData.course}
             onChange={handleChange}
             required
@@ -61,7 +61,7 @@ const GenerateCertificate = () => {
           <input
             type="text"
             name="issuer"
-            placeholder="Issuer's Name"
+            placeholder="Enter issuer's name"
             value={formData.issuer}
             onChange={handleChange}
             required

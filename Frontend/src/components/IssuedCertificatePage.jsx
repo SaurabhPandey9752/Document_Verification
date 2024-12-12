@@ -59,7 +59,7 @@ const IssuedCertificatePage = () => {
           className={`${styles.tab} ${activeTab === "Issued Certificate" ? styles.activeTab : ""}`}
           onClick={() => handleTabClick("Issued Certificate")}
         >
-          Issued Certificate
+          Issue a Certificate
         </div>
         <div className={styles.userIcon}>
           <label htmlFor="uploadIcon">
@@ -91,7 +91,7 @@ const IssuedCertificatePage = () => {
               onChange={(e) => setSearchTerm(e.target.value)}
               className={styles.searchInput}
             />
-            <button className={styles.searchButton}>🔍</button>
+            <button className={styles.searchButton}></button>
           </div>
 
           {/* Heading */}
