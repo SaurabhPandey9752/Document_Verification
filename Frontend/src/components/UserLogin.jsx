@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Mail, Lock } from 'lucide-react';
+import { AiOutlineMail, AiOutlineLock } from 'react-icons/ai';
 
 const UserLogin = () => {
   const navigate = useNavigate();
@@ -11,9 +11,9 @@ const UserLogin = () => {
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
-      [name]: value
+      [name]: value,
     }));
   };
 
@@ -39,7 +39,7 @@ const UserLogin = () => {
             </label>
             <div className="relative">
               <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                <Mail className="h-5 w-5 text-gray-400" />
+                <AiOutlineMail className="h-5 w-5 text-gray-400" />
               </div>
               <input
                 id="email"
@@ -60,7 +60,7 @@ const UserLogin = () => {
             </label>
             <div className="relative">
               <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                <Lock className="h-5 w-5 text-gray-400" />
+                <AiOutlineLock className="h-5 w-5 text-gray-400" />
               </div>
               <input
                 id="password"
