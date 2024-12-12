@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Mail, Lock } from 'lucide-react';
+import { FaEnvelope, FaLock } from 'react-icons/fa'; // Importing icons from react-icons
 
 const VerifyLogin = () => {
   const navigate = useNavigate();
@@ -39,7 +39,7 @@ const VerifyLogin = () => {
             </label>
             <div className="relative">
               <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                <Mail className="h-5 w-5 text-gray-400" />
+                <FaEnvelope className="h-5 w-5 text-gray-400" />
               </div>
               <input
                 id="email"
@@ -60,7 +60,7 @@ const VerifyLogin = () => {
             </label>
             <div className="relative">
               <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                <Lock className="h-5 w-5 text-gray-400" />
+                <FaLock className="h-5 w-5 text-gray-400" />
               </div>
               <input
                 id="password"
