@@ -5,7 +5,7 @@ const VerifyEmail = () => {
   const [code, setCode] = useState(["", "", "", "", "", ""]);
   const navigate = useNavigate();
   const location = useLocation();
-  const email = location.state?.email || "user@example.com";
+  const email = location.state?.email || "pandeysaurabh9752@gmail.com";
 
   const handleInputChange = (value, index) => {
     if (/^\d$/.test(value) || value === "") {
@@ -21,7 +21,7 @@ const VerifyEmail = () => {
   const handleCreateAccount = () => {
     const verificationCode = code.join("");
     console.log("Entered Verification Code:", verificationCode);
-    navigate("/create-wallet", { state: { name: "User" } });
+    window.location.href= "http://localhost:3000/", { state: { name: "User" } };
   };
 
   return (
